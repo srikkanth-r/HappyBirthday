@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
+
+    WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        mWebView = (WebView) findViewById(R.id.webView);
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        mWebView.loadUrl("https://sway.com/sOgculRFBADOCbGf");
     }
 
     @Override
