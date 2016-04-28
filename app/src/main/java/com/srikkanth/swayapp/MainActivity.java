@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mWebView = (WebView) findViewById(R.id.webView);
+        /*mWebView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://sway.com/sOgculRFBADOCbGf");
+        mWebView.loadUrl("https://sway.com/sOgculRFBADOCbGf");*/
     }
 
     @Override
