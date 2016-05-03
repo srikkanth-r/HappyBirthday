@@ -1,19 +1,21 @@
 package com.srikkanth.swayapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    WebView mWebView;
+    RelativeLayout mGreetingCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +33,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*mWebView = (WebView) findViewById(R.id.webView);
-        WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://sway.com/sOgculRFBADOCbGf");*/
+        mGreetingCardView = (RelativeLayout) findViewById(R.id.greetingCard);
+        mGreetingCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "card tapped", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
+            }
+        });
+
     }
 
     @Override
