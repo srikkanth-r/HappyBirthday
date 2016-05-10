@@ -28,17 +28,18 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
             }
         });
 
-        mGreetingCardView = (RelativeLayout) findViewById(R.id.greetingCard);
+        mGreetingCardView = (RelativeLayout) findViewById(R.id.mainLayout);
         mGreetingCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "card tapped", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
+//                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
             }
         });
 

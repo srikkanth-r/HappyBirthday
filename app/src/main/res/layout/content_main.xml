@@ -10,20 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.srikkanth.swayapp.MainActivity"
-    android:id="@+id/greetingCard"
+    android:id="@+id/mainLayout"
     android:clickable="true"
     >
 
-    <!--<WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />-->
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/cardViewGreeting"
+        android:layout_marginBottom="10dp"
         >
 
         <RelativeLayout
@@ -34,7 +29,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:id="@+id/imageView"
+                android:id="@+id/imgGreeting"
                 android:layout_marginEnd="30dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
@@ -45,19 +40,110 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Greeting Card"
-                android:id="@+id/textView"
+                android:id="@+id/txtGreeting"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/imageView" />
+                android:layout_toEndOf="@+id/imgGreeting" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Tap to view"
-                android:id="@+id/textView2"
-                android:layout_below="@+id/textView"
-                android:layout_toRightOf="@+id/imageView"
-                android:layout_toEndOf="@+id/imageView" />
+                android:id="@+id/descriptionGreeting"
+                android:layout_below="@+id/txtGreeting"
+                android:layout_toRightOf="@+id/imgGreeting"
+                android:layout_toEndOf="@+id/imgGreeting" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardViewVideos"
+        android:layout_below="@+id/cardViewGreeting"
+        android:layout_marginBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imgVideos"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@android:drawable/presence_video_online" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Videos"
+                android:id="@+id/txtVideos"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imgVideos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Tap to view"
+                android:id="@+id/descriptionVideos"
+                android:layout_below="@+id/txtVideos"
+                android:layout_toRightOf="@+id/imgVideos"
+                android:layout_toEndOf="@+id/imgVideos" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardViewPhotos"
+        android:layout_below="@+id/cardViewVideos"
+        android:layout_marginBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imgPhotos"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Gallery"
+                android:id="@+id/txtPhotos"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imgPhotos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Tap to view"
+                android:id="@+id/descriptionPhotos"
+                android:layout_below="@+id/txtPhotos"
+                android:layout_toRightOf="@+id/imgPhotos"
+                android:layout_toEndOf="@+id/imgPhotos" />
 
         </RelativeLayout>
 
