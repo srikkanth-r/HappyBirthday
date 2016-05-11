@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mGreetingCardView = (RelativeLayout) findViewById(R.id.mainLayout);
+        mGreetingCardView = (RelativeLayout) findViewById(R.id.layoutPhotos);
         mGreetingCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "card tapped", Toast.LENGTH_LONG).show();
-//                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
+                startActivity(new Intent(MainActivity.this, GalleryActivity.class));
             }
         });
 
