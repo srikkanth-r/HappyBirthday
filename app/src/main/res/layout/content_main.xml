@@ -12,21 +12,30 @@
     tools:context="com.srikkanth.swayapp.MainActivity"
     android:id="@+id/mainLayout"
     android:clickable="true"
+    android:background="#FFFFFF"
     >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cardViewGreeting"
         android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        app:cardElevation="2dp"
         >
 
         <RelativeLayout
+            android:id="@+id/layoutGreeting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:background="@drawable/greetingcard_bg"
+            >
 
-            <ImageView
+            <!--<ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:id="@+id/imgGreeting"
@@ -42,9 +51,9 @@
                 android:text="Greeting Card"
                 android:id="@+id/txtGreeting"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/imgGreeting" />
+                android:layout_toEndOf="@+id/imgGreeting" />-->
 
-            <TextView
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -52,7 +61,8 @@
                 android:id="@+id/descriptionGreeting"
                 android:layout_below="@+id/txtGreeting"
                 android:layout_toRightOf="@+id/imgGreeting"
-                android:layout_toEndOf="@+id/imgGreeting" />
+                android:layout_toEndOf="@+id/imgGreeting"
+                />-->
 
         </RelativeLayout>
 
@@ -65,9 +75,11 @@
         android:id="@+id/cardViewVideos"
         android:layout_below="@+id/cardViewGreeting"
         android:layout_marginBottom="10dp"
+        app:cardElevation="2dp"
         >
 
         <RelativeLayout
+            android:id="@+id/layoutVideos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp">
@@ -110,6 +122,7 @@
         android:id="@+id/cardViewPhotos"
         android:layout_below="@+id/cardViewVideos"
         android:layout_marginBottom="10dp"
+        app:cardElevation="5dp"
         >
 
         <RelativeLayout
