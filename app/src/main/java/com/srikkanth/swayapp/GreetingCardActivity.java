@@ -1,15 +1,12 @@
 package com.srikkanth.swayapp;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class GreetingCardActivity extends AppCompatActivity {
+public class GreetingCardActivity extends AppCompatActivity implements Config {
 
     WebView mWebView;
 
@@ -33,7 +30,7 @@ public class GreetingCardActivity extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://sway.com/sOgculRFBADOCbGf");
+        mWebView.loadUrl(SWAY_URL);
     }
 
 }
