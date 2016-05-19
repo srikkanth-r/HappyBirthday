@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         imgHappy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(MainActivity.this, GreetingCardActivity.class));
-                Snackbar.make(view, "Happy Birthday Baby !!!", Snackbar.LENGTH_LONG)
+
+                Snackbar.make(view, "Happy Birthday !!!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mPhotoGalleryView = (RelativeLayout) findViewById(R.id.layoutPhotos);
+        /*mPhotoGalleryView = (RelativeLayout) findViewById(R.id.layoutPhotos);
         mPhotoGalleryView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(getApplicationContext(), "card tapped", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(MainActivity.this, GalleryActivity.class));
             }
-        });
+        });*/
 
     }
 

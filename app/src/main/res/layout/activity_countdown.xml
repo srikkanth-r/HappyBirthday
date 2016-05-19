@@ -18,4 +18,27 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:fontFamily="@string/abc_capital_on" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="12"
+        android:id="@+id/password"
+        android:layout_below="@+id/txtCountdown"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:hint="Hermione's patronus"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPassword"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@android:drawable/ic_menu_send"
+        android:onClick="checkPassword"/>
+
+
 </RelativeLayout>

@@ -6,9 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.Time;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -17,18 +21,46 @@ import java.util.concurrent.TimeUnit;
 public class CountdownActivity extends AppCompatActivity {
 
     TextView txtCountDown;
+    EditText mPassword;
+    ImageButton btnEnterPassword;
+
+    String[] passwordArray =
+            {
+                    "Abstinence",
+                    "Balderdash",
+                    "Banana Fritters",
+                    "Baubles",
+                    "Caput Draconis",
+                    "Dilligrout",
+                    "Fairy Lights",
+                    "Flibbertigibbet",
+                    "Fortuna Major",
+                    "Mimbulus Mimbletonia",
+                    "Oddsbodikins",
+                    "Pig Snout",
+                    "Quid Agis",
+                    "Scurvy Cur",
+                    "Tapeworm",
+                    "Wattlebird"
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countdown);
 
+        mPassword = (EditText) findViewById(R.id.password);
+
+        btnEnterPassword = (ImageButton) findViewById(R.id.btnPassword);
+
         txtCountDown = (TextView) findViewById(R.id.txtCountdown);
 
         txtCountDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CountdownActivity.this, MainActivity.class));
+//                startActivity(new Intent(CountdownActivity.this, MainActivity.class));
+                mPassword.setVisibility(View.VISIBLE);
+                btnEnterPassword.setVisibility(View.VISIBLE);
             }
         });
 
@@ -61,9 +93,27 @@ public class CountdownActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                txtCountDown.setText("done!");
+                txtCountDown.setText("It's your birthday !!!");
+                mPassword.setVisibility(View.VISIBLE);
+                btnEnterPassword.setVisibility(View.VISIBLE);
+
             }
         }.start();
 
+    }
+
+    public void checkPassword(View view)
+    {
+        String strPassword = mPassword.getText().toString();
+
+        if(strPassword.equalsIgnoreCase("otter"))
+        {
+            Toast.makeText(this, "Password Accepted", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(CountdownActivity.this, MainActivity.class));
+        }
+        else
+        {
+            Toast.makeText(this, "Hermione would be so disappointed !!!", Toast.LENGTH_LONG).show();
+        }
     }
 }
