@@ -28,9 +28,12 @@ public class GreetingCardActivity extends AppCompatActivity implements Config {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mWebView = (WebView) findViewById(R.id.webView);
-        WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl(SWAY_URL);
+
+        if(mWebView != null) {
+            WebSettings webSettings = mWebView.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            mWebView.loadUrl(SWAY_URL);
+        }
     }
 
 }
