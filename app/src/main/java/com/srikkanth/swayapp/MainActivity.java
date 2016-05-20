@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setDataAndType(Uri.parse("file:///android_asset/video.mp4"), "video/mp4");*/
 
 
-                startActivity(new Intent(MainActivity.this, GalleryActivity.class));
+//                startActivity(new Intent(MainActivity.this, GalleryActivity.class));
             }
         });
 
