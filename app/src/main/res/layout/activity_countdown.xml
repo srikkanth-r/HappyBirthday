@@ -13,11 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50sp"
+
         android:id="@+id/txtCountdown"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@string/abc_capital_on" />
+        android:fontFamily="@string/abc_capital_on"
+
+        android:layout_marginBottom="10dp"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,17 +30,29 @@
         android:layout_below="@+id/txtCountdown"
         android:layout_centerHorizontal="true"
         android:visibility="gone"
-        android:hint="Hermione's patronus"/>
+        android:hint="Enter Password"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hint : Hermione's patronus"
+        android:id="@+id/hintText"
+        android:layout_below="@+id/password"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnPassword"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/hintText"
         android:layout_centerHorizontal="true"
         android:visibility="gone"
         android:src="@android:drawable/ic_menu_send"
         android:onClick="checkPassword"/>
+
 
 
 </RelativeLayout>

@@ -1,10 +1,9 @@
 package com.srikkanth.swayapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.format.Time;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -12,37 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
 
 public class CountdownActivity extends AppCompatActivity {
 
     TextView txtCountDown;
     EditText mPassword;
     ImageButton btnEnterPassword;
-
-    String[] passwordArray =
-            {
-                    "Abstinence",
-                    "Balderdash",
-                    "Banana Fritters",
-                    "Baubles",
-                    "Caput Draconis",
-                    "Dilligrout",
-                    "Fairy Lights",
-                    "Flibbertigibbet",
-                    "Fortuna Major",
-                    "Mimbulus Mimbletonia",
-                    "Oddsbodikins",
-                    "Pig Snout",
-                    "Quid Agis",
-                    "Scurvy Cur",
-                    "Tapeworm",
-                    "Wattlebird"
-            };
+    TextView hintText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +29,8 @@ public class CountdownActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
 
         btnEnterPassword = (ImageButton) findViewById(R.id.btnPassword);
+
+        hintText = (TextView) findViewById(R.id.hintText);
 
         txtCountDown = (TextView) findViewById(R.id.txtCountdown);
 
@@ -93,9 +72,11 @@ public class CountdownActivity extends AppCompatActivity {
             }
 
             public void onFinish() {
-                txtCountDown.setText("It's your birthday !!!");
+                txtCountDown.setText("Happy birthday !");
+//                txtCountDown.setTextAppearance(getApplicationContext(), android.R.style.TextAppearance_Medium);
                 mPassword.setVisibility(View.VISIBLE);
                 btnEnterPassword.setVisibility(View.VISIBLE);
+                hintText.setVisibility(View.VISIBLE);
 
             }
         }.start();

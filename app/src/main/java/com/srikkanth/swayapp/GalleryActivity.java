@@ -1,16 +1,15 @@
 package com.srikkanth.swayapp;
 
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.GridView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class GalleryActivity extends AppCompatActivity {
 
-    GridView mGridView;
+    VideoView mVideoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +18,19 @@ public class GalleryActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mGridView = (GridView) findViewById(R.id.gridView);
-        mGridView.setAdapter(new ImageAdapter(this));
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mVideoView = (VideoView) findViewById(R.id.videoView);
+        /*
+         * Alternatively, you can use mVideoView.setVideoPath(<path>);
+         */
+        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() +
+                "/" + R.raw.video));
+        mVideoView.setMediaController(new MediaController(this));
+        mVideoView.requestFocus();
+        mVideoView.start();
+
+
     }
 
 }
