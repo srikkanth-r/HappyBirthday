@@ -5,5 +5,5 @@ package com.srikkanth.swayapp;
  */
 public interface Config {
 
-    String SWAY_URL = "https://sway.com/tupG0ACRTWf4Bpfv";//"https://sway.com/sOgculRFBADOCbGf";
+    String SWAY_URL = "";//Add Sway URL here
 }
