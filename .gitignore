@@ -6,3 +6,7 @@
 .DS_Store
 /build
 /captures
+/app/src/main/res/raw/video.mp4
+app/src/main/java/com/srikkanth/swayapp/adapters/
+app/src/main/java/com/srikkanth/swayapp/ui/
+app/src/main/java/com/srikkanth/swayapp/utils/
